@@ -1,59 +1,14 @@
-export const products = [
-  {
-    "id": 1,
-    "name": "장비 정보 1",
-    "properties": {
-      "no": "asset product 1"
-    },
-    "description": "",
+export const products = Array.from(Array(9), (_, i) => ({
+  "id": i + 1,
+  "name": `장비 정보 ${i + 1}`,
+  "properties": {
+    "no": `asset product ${i + 1}`
   },
-  {
-    "id": 2,
-    "name": "장비 정보 2",
-    "properties": {
-      "no": "asset product 2"
-    },
-    "description": "",
-  },
-  {
-    "id": 3,
-    "name": "장비 정보 3",
-    "properties": {
-      "no": "asset product 3"
-    },
-    "description": "",
-  },
-];
+  "description": "",
+}));
 
-export const nodes = [
-  {
-    "id": 1,
-    "name": "센서 1",
-    "serialNo": "serial no. 1",
-  },
-  {
-    "id": 2,
-    "name": "센서 2",
-    "serialNo": "serial no. 2",
-  },
-  {
-    "id": 3,
-    "name": "센서 3",
-    "serialNo": "serial no. 3",
-  },
-  {
-    "id": 4,
-    "name": "센서 4",
-    "serialNo": "serial no. 4",
-  },
-  {
-    "id": 5,
-    "name": "센서 5",
-    "serialNo": "serial no. 5",
-  },
-  {
-    "id": 6,
-    "name": "센서 6",
-    "serialNo": "serial no. 6",
-  },
-];
+export const nodes = Array.from(Array(17), (_, i) => ({
+  "id": i + 1,
+  "name": `센서 ${i + 1}`,
+  "serialNo": `serial no. ${i + 1}`,
+}));
