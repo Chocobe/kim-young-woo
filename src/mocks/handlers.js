@@ -13,6 +13,22 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(assets));
   }),
 
+  rest.get("/assets/:id", (req, res, ctx) => {
+    const id = req.params?.id;
+
+    if (!id) {
+      return res(ctx.status(400));
+    }
+
+    const asset = assets.find(asset => asset.id === Number(id));
+
+    if (!asset) {
+      return res(ctx.status(400));
+    }
+
+    return res(ctx.status(200), ctx.json(asset));
+  }),
+
   rest.post("/assets", (req, res, ctx) => {
     if (!req.body?.name) {
       return res(ctx.status(400), ctx.json({ messgae: "name is required" }));
