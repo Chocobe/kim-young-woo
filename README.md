@@ -51,7 +51,7 @@ response {
 POST /assets
 
 body {
-   * id: number;
+   id: number;
    * name: string;
    * assetProduct: {
       id: number;
